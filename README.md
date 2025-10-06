@@ -4,6 +4,28 @@
 </p>
 <p align="justify"><a href="https://docs.360.yandex.ru/docs/view?url=ya-disk-public%3A%2F%2FG%2FsBR6g5Su%2Bg4Zy0ZkTVj%2B5pfZZbCVor5KxjlBMezawb%2BmSFyWZMpReFR38TYCmwDqZvSgIch5AN9ddz7ydViQ%3D%3D&name=ТЗpython_EM_июль.docx&nosw=1">Ссылка на ТЗ</a></p>
 
+<p>Инструкция по запуску</p>
+
+<p>Копируем проект</p>
+
+```python
+git clone https://github.com/Stasnislawe/EffectiveMobileTZ
+```
+<p>Запускаем виртуальную среду, устанавливаем зависимости</p>
+
+```python
+cd core
+pip install -r requirements.txt
+```
+<p>Не забываем в .env добавить свои данные для БД postgreSQL, также можно закомментировать подключение к PostgreSQL и использовать стандартную db.sqlite3</p>
+
+```python
+python manage.py makemigrations
+python manage.py migrate
+python manage.py seed_data # Создание фейк данных для тестирования
+python manage.py runserver
+```
+
 <p align="justify">
 Система построена на следующих основных сущностях, которые образуют стройную иерархию управления доступом:
 </p>
